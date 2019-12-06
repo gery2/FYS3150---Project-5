@@ -6,24 +6,24 @@ from tqdm import tqdm
 from scipy import special, stats
 plt.rcParams.update({'font.size': 14})
 
-max = 500 #max value for money / x-value
-n = 10**5 #10**7
-N = 500 #500, 1000
+max = 100 #max value for money / x-value
+n = 10**7 #10**7
+N = 1000 #500, 1000
 m0 = 1 #starter money
 mc = 1000 #10**3 - 10**4
 dm = 0.01 #bin width
 beta = 1/m0
-lam = 0 #0, 0.25
+lam = 0.25 #0, 0.5
 
 #lam = 0: 'outfile.npy'
-(M1,M2,M3,M4) = np.load('outfile_lam.npy') #loading calculations. with lam=0.25 is outfile_lam.npy
+(M1,M2,M3,M4) = np.load('finaltest_test.npy') #loading calculations. with lam=0.25 is outfile_lam.npy
 
 x = np.linspace(0,max,N)
 x2 = np.linspace(0,max,len(M1))
 #masks for different alphas
 mask1 = np.where(M1 != 0)
 # only looking at the values where agents have money
-i1 = 600; i2 = 900; i3 = 1900; i4 = 3800 #intervals to look at for tails.
+i1 = 200; i2 = 240; i3 = 300; i4 = 400 #intervals to look at for tails.
 M_tail1 = M1[mask1][-i1:]
 x_tail1 = x2[mask1][-i1:]
 mask2 = np.where(M2 != 0)
@@ -55,7 +55,7 @@ plt.loglog(x2,M4,)
 plt.title('Money per agent. 10^%d transactions. MC = %d' %(int(np.log10(n)), mc))
 plt.xlabel('Money')
 plt.ylabel('amount of agents')
-plt.legend(('α = 0.5', 'α = 1.0', 'α = 1.5', 'α = 2.0'))
+plt.legend(('α = 0.5', 'α = 4.0', 'α = 10', 'α = 50'))
 plt.xlim(0.1,max)
 plt.show()
 

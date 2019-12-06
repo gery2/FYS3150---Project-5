@@ -7,28 +7,29 @@ from scipy import special, stats
 plt.rcParams.update({'font.size': 14})
 
 max = 100 #max value for money / x-value
-n = 10**6 #1024 for the degree plot, 10**7 otherwise
+n = 10**7 #1024 for the degree plot, 10**7 otherwise
 N = 1000 #1000
 m0 = 1 #starter money
 mc = 1000 #10**3 - 10**4
 dm = 0.01 #bins width
 beta = 1/m0
-lam = 0 #0, 0.25
+lam = 0 #0, 0.5
 
 #lam = 0: 'outfile2.npy'
 #loading calculations. with lam=0.25 is outfile2_lam.npy
-(M10,M11,M12,M13,M14,M20,M21,M22,M23,M24) = np.load('outfile2.npy')
+(M10,M11,M12,M13,M14,M20,M21,M22,M23,M24) = np.load('5e_outfile_lam.npy')
 
 x = np.linspace(0,max,N)
 x2 = np.linspace(0,max,len(M10))
+'''
 #intervals to look at for tails. lam=0
-i10 = 500; i11 = 300; i12 = 300; i13 = 300; i14 = 300
-i20 = 2000; i21 = 800; i22 = 400; i23 = 300; i24 = 300
+i10 = 1100; i11 = 570; i12 = 525; i13 = 525; i14 = 500
+i20 = 5300; i21 = 850; i22 = 550; i23 = 550; i24 = 500
 '''
-#intervals to look at for tails. lam=0.25
-i10 = 500; i11 = 300; i12 = 300; i13 = 300; i14 = 300
-i20 = 2000; i21 = 800; i22 = 400; i23 = 300; i24 = 300
-'''
+#intervals to look at for tails. lam=0.5
+i10 = 200; i11 = 185; i12 = 190; i13 = 165; i14 = 180
+i20 = 400; i21 = 100000; i22 = 195; i23 = 185; i24 = 175
+
 
 #masks for different alphas, gammas
 mask10 = np.where(M10 != 0) # only looking at the values where agents have money

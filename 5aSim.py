@@ -9,8 +9,8 @@ max = 7 #max money value
 n = 10**6 #10**7
 N = 500 #number of agents
 m0 = 1
-mc = 500 #10**3 - 10**4
-dm = 7/500 #0.01 - 0.05
+mc = 10**3 #10**3 - 10**4
+dm = 7/500 #0.01 - 0.05 (7/500=0.014)
 beta = 1/m0
 
 #Transactions

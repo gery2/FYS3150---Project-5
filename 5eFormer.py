@@ -7,13 +7,13 @@ from scipy import special
 plt.rcParams.update({'font.size': 14})
 
 max = 100 #max value for money / x-value
-n = 10**6 #1024 for the degree plot, 10**7 otherwise
-N = 1000 #1000
+n = 1024 #1024 for the degree plot, 10**7 otherwise
+N = 1024 #1000
 m0 = 1 #starter money
-mc = 1000 #10**3 - 10**4
+mc = 10000 #10**3 - 10**4
 dm = 0.01 #bins width
 beta = 1/m0
-lam = 0 #0, 0.25
+lam = 0.5 #0, 0.5
 
 #Transactions
 @jit(nopython=True)
@@ -98,7 +98,7 @@ M24 = M24/np.sum(M24)/dm; Degree24 = Degree24 / mc / np.sum(Degree24 / mc)
 
 from tempfile import TemporaryFile
 outfile = TemporaryFile()
-np.save('outfile2', (M10,M11,M12,M13,M14,M20,M21,M22,M23,M24)) #saving calculations for later plotting
+np.save('Degree_outfile_lam', (M10,M11,M12,M13,M14,M20,M21,M22,M23,M24)) #saving calculations for later plotting
 
 x = np.linspace(0,max,N)
 x2 = np.linspace(0,max,len(np.arange(0, max + dm, dm))-1)

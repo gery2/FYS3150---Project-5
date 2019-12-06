@@ -7,14 +7,14 @@ from scipy import special, stats
 plt.rcParams.update({'font.size': 14})
 
 #max value [7, 4.5, 3.5, 2] for parametrization and power laws (for diff lam)
-max = 2 #max value for money / x-value
-n = 10**6 #10**7
-N = 500
+max = 7 #max value for money / x-value
+n = 10**5 #10**7
+N = 250
 m0 = 1
-mc = 2000 #10**3 - 10**4
+mc = 500 #10**3 - 10**4
 dm = 0.01
 beta = 1/m0
-lam = 0.9 #0.25, 0.5, 0.9
+lam = 0.25 #0.25, 0.5, 0.9
 n_lam = 1 + (3*lam/(1 - lam))
 an = 1/(special.gamma(n_lam))*(n_lam/m0)**n_lam
 fn = np.zeros(N)
@@ -65,8 +65,8 @@ for i in range(N):
 x2 = np.linspace(0,max,len(np.arange(0, max + dm, dm))-1)
 
 mask = np.where(M != 0) # only looking at the values where agents have money
-M_tail = M[mask][-40:] #-100: for lamda 0.25 and 0.5
-x_tail = x2[mask][-40:] #-100: for lamda 0.25 and 0.5
+M_tail = M[mask][-140:] #-100: for lamda 0.25 and 0.5
+x_tail = x2[mask][-140:] #-100: for lamda 0.25 and 0.5
 
 
 slope, inter = stats.linregress(np.log(x_tail), np.log(M_tail))[:2]

@@ -7,13 +7,13 @@ from scipy import special, stats
 plt.rcParams.update({'font.size': 14})
 
 max = 100 #max value for money / x-value, around 100 here.
-n = 10**6 #10**7
-N = 500 #500, 1000
+n = 10**5 #10**7
+N = 1000 #500, 1000
 m0 = 1 #starter money
-mc = 750 #10**3 - 10**4
+mc = 300 #10**3 - 10**4
 dm = 0.01 #bin width
 beta = 1/m0
-lam = 0.25 #0, 0.25
+lam = 0 #0, 0.5
 
 #Transactions
 @jit(nopython=True)
@@ -62,16 +62,16 @@ def func(n,N,m0,mc,dm,beta,alfa):
 #Calculating transactions
 M1 = func(n,N,m0,mc,dm,beta,alfa=0.5)
 M1 = M1/np.sum(M1)/dm
-M2 = func(n,N,m0,mc,dm,beta,alfa=1)
+M2 = func(n,N,m0,mc,dm,beta,alfa=4)
 M2 = M2/np.sum(M2)/dm
-M3 = func(n,N,m0,mc,dm,beta,alfa=1.5)
+M3 = func(n,N,m0,mc,dm,beta,alfa=10)
 M3 = M3/np.sum(M3)/dm
-M4 = func(n,N,m0,mc,dm,beta,alfa=2)
+M4 = func(n,N,m0,mc,dm,beta,alfa=50)
 M4 = M4/np.sum(M4)/dm
 
 from tempfile import TemporaryFile
 outfile = TemporaryFile()
-np.save('outfile_lam', (M1,M2,M3,M4)) #saving calculations for later plotting
+np.save('finaltest_test', (M1,M2,M3,M4)) #saving calculations for later plotting
 
 
 
