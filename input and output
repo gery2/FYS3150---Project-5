@@ -1,0 +1,71 @@
+(base) C:\Python\CS>python 5aSim.py
+100%|██████████████████████████████████████████████████████████████████████████████| 1000/1000 [00:12<00:00, 83.12it/s]
+
+
+(base) C:\Python\CS>python 5cSavings.py
+100%|███████████████████████████████████████████████████████████████████████████████| 500/500 [00:00<00:00, 598.13it/s]
+-4.672252481933952 0.8490321762422051
+5cSavings.py:90: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter)*x**(slope)))
+
+
+(base) C:\Python\CS>python 5dNearest.py
+100%|███████████████████████████████████████████████████████████████████████████████| 300/300 [00:01<00:00, 153.08it/s]
+100%|███████████████████████████████████████████████████████████████████████████████| 300/300 [00:00<00:00, 301.61it/s]
+100%|███████████████████████████████████████████████████████████████████████████████| 300/300 [00:00<00:00, 382.20it/s]
+100%|███████████████████████████████████████████████████████████████████████████████| 300/300 [00:00<00:00, 358.51it/s]
+
+
+(base) C:\Python\CS>python 5dPlots.py
+slope1 =  -1.3275381104763713 inter1 = -4.55827158295447
+slope2 =  -0.5348315936535379 inter2 = -6.06595109601631
+slope3 =  -0.9104969645958094 inter3 = -4.8202364661726556
+slope4 =  -1.2889351523474752 inter4 = -3.526425900997377
+5dPlots.py:68: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter1)*x**(slope1)), color='green')
+5dPlots.py:80: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter2)*x**(slope2)), color='green')
+5dPlots.py:92: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter3)*x**(slope3)), color='green')
+
+
+(base) C:\Python\CS>python 5eFormer.py
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 302.93it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:32<00:00, 306.97it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 300.97it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:34<00:00, 288.72it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 300.29it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 299.50it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 302.00it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 302.31it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 298.84it/s]
+100%|███████████████████████████████████████████████████████████████████████████| 10000/10000 [00:33<00:00, 302.68it/s]
+
+
+(base) C:\Python\CS>python 5ePlots.py
+slope10 =  -8.745359894422089 inter10 = 5.721980685702263
+slope11 =  -10.056797550744312 inter11 = 5.9547271683500185
+slope12 =  -10.196637407028486 inter12 = 6.0409287333622625
+slope13 =  -10.67637076861069 inter13 = 6.645347314649907
+slope14 =  -10.480343014328371 inter14 = 6.386986431850589
+slope20 =  -6.224835264245326 inter20 = 3.9631877420255046
+slope21 =  -1.9990781405959344 inter21 = -2.561357261755263
+slope22 =  -10.0209897568155 inter22 = 5.860313446505446
+slope23 =  -10.01579337503989 inter23 = 5.883201607696719
+slope24 =  -10.479429679457798 inter24 = 6.426078606753743
+5ePlots.py:95: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter10)*x**(slope10)), color='green')
+5ePlots.py:107: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter11)*x**(slope11)), color='green')
+5ePlots.py:119: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter12)*x**(slope12)), color='green')
+5ePlots.py:131: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter13)*x**(slope13)), color='green')
+5ePlots.py:143: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter14)*x**(slope14)), color='green')
+5ePlots.py:155: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter20)*x**(slope20)), color='green')
+5ePlots.py:167: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter21)*x**(slope21)), color='green')
+5ePlots.py:179: RuntimeWarning: divide by zero encountered in power
+  plt.loglog(x, (np.exp(inter22)*x**(slope22)), color='green')
